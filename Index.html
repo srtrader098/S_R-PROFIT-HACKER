@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="Cache-Control" content="no-store" />
+
+<title>S_R PROFIT HACKER</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Orbitron',sans-serif;color:#e5e7eb;background:#000;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;background:linear-gradient(120deg,#020617,#020617,#020617);background-size:400% 400%;animation:bgMove 15s ease infinite;z-index:-2}
+  @keyframes bgMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .neon{color:#38bdf8;text-shadow:0 0 5px #38bdf8,0 0 15px #38bdf8,0 0 30px #38bdf8}
+  header{display:flex;align-items:center;justify-content:space-between;padding:10px 30px}
+  .logo img{display:block;width:64px;height:64px;object-fit:contain;filter:drop-shadow(0 0 12px #38bdf8)}
+  .title{text-align:center;flex:1}
+  .title h1{font-size:36px}
+  .typing{margin-top:6px;font-size:14px;color:#94a3b8;height:18px}
+  .menu{font-size:26px;cursor:pointer}
+  section{max-width:1100px;margin:05px auto;padding:20px}
+  .box{background:rgba(2,6,23,0.97);border:1px solid rgba(56,189,248,0.4);border-radius:14px;padding:30px;margin-top:30px;box-shadow:0 0 0 1px rgba(56,189,248,0.15),0 10px 40px rgba(0,0,0,0.6);}
+  h2{text-align:center;margin-bottom:10px}
+  .sub{text-align:center;font-size:13px;color:#94a3b8;margin-bottom:25px}
+  label{display:block;margin-top:18px;font-size:13px;color:#cbd5f5}
+  input{width:100%;padding:14px;margin-top:8px;border-radius:8px;background:#020617;border:1px solid #1e293b;color:#fff;font-family:'Orbitron',sans-serif}
+  input::placeholder{color:#64748b;}
+  button{margin-top:25px;width:100%;padding:14px;background:#38bdf8;color:#020617;font-weight:700;border:none;border-radius:10px;cursor:pointer;font-family:'Orbitron',sans-serif}
+  .gear{display:inline-block;animation:spin 2s linear infinite}
+  @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .owner{text-align:center}
+  .owner img{width:140px;height:140px;border-radius:50%;border:3px solid #38bdf8;margin:20px 0;object-fit:cover}
+  footer{text-align:center;font-size:12px;color:#64748b;margin:60px 0 20px}
+  /* ===== Bot Sections ===== */
+  .bot-section{display:none;margin-top:30px;}
+  .bot-container{width:100%;max-width:450px;margin:0 auto;background:rgba(20,25,45,0.95);border-radius:20px;padding:20px;box-shadow:0 0 30px rgba(140,0,255,0.2);margin-bottom:40px;}
+  .bot-container h1{text-align:center;font-size:18px;margin-bottom:5px}
+  .bot-container .typing{height:18px;margin-bottom:20px;text-align:center;color:#00f0ff;font-size:14px}
+  .bot-container select, .bot-container button{width:100%;padding:12px;border-radius:12px;border:none;margin-bottom:12px;background:#10162b;color:#fff;font-family:'Orbitron',sans-serif}
+  .bot-container button{background:linear-gradient(135deg,#00f0ff,#6f00ff);cursor:pointer;font-size:14px}
+  .signal-card{margin-top:20px;padding:16px;border-radius:16px;background:#0e1328;box-shadow:inset 0 0 20px rgba(0,255,255,0.08);}
+  .signal-header{display:flex;justify-content:space-between;align-items:center;}
+  .signal-header .pair{font-size:16px;}
+  .action{padding:6px 14px;border-radius:20px;font-size:12px;}
+  .buy{background:#00c853;}
+  .sell{background:#d50000;}
+  .signal-id{font-size:10px;opacity:0.7;margin-top:4px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
+  .box2{background:#0b1024;padding:10px;border-radius:12px;text-align:center;font-size:12px;}
+  .generated{margin-top:10px;font-size:10px;opacity:0.6;text-align:center;}
+  .signal-list{margin-top:20px;background:#0e1328;border-radius:16px;padding:12px;max-height:350px;overflow-y:auto;}
+  .signal-item{font-size:13px;padding:8px 6px;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .call{color:#00ff9c;}
+  .put{color:#ff4d6d;}
+  .signal-item:last-child{border-bottom:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="https://i.ibb.co/WWV7N4Ws/logo.png" alt="S_R TRADER"></div>
+  <div class="title">
+    <h1 class="neon">S_R PROFIT HACKER</h1>
+    <div class="typing" id="typing"></div>
+  </div>
+  <div class="menu" onclick="toggleFAQ()">⋮</div>
+  <div id="faq" style="display:none;position:absolute;right:20px;top:80px;background:#020617;border:1px solid #0f172a;border-radius:10px;padding:15px;width:260px;box-shadow:0 0 20px rgba(56,189,248,.2)"><b class="neon">FAQ</b><p style="font-size:12px;margin-top:10px;color:#cbd5f5">S_R PROFIT HACKER is an AI-powered signal platform. It does not execute trades. Users manually trade based on signals. No loss history here.</p></div>
+</header>
+
+<section>
+  <!-- ACTIVATE ACCOUNT -->
+  <div class="box" id="activateBox">
+    <h2 class="neon">Activate Account</h2>
+    <div class="sub">Enter your details to access the platform</div>
+    <label>Enter Your Name</label>
+    <input type="text" id="nameInput" placeholder="Full Name" />
+    <label>Enter Your Telegram Username</label>
+    <input type="text" id="telegramInput" placeholder="@Username" />
+    <label>License Key</label>
+    <input type="password" id="licenseInput" placeholder="S_R-XXX-XXXXX" />
+    <button id="activateBtn"><span class="gear">⚙️</span> Activate Account</button>
+  </div>
+
+  <!-- Bot Sections -->
+  <div class="bot-section" id="botSections">
+    <!-- LIVE SIGNAL -->
+    <div class="bot-container" id="liveBot">
+      <h1>S_R LIVE SIGNAL GENERATOR</h1>
+      <div class="typing" id="typingLive"></div>
+      <select id="marketLive">
+        <option>USD/BDT (OTC)</option>
+        <option>USD/BRL (OTC)</option>
+        <option>USD/INR (OTC)</option>
+        <option>USD/IDR (OTC)</option>
+        <option>USD/MXN (OTC)</option>
+        <option>USD/PHP (OTC)</option>
+        <option>USD/PKR (OTC)</option>
+        <option>USD/NGN (OTC)</option>
+        <option>USD/COP (OTC)</option>  
+        <option>USD/EGP (OTC)</option>
+        <option>USD/TRY (OTC)</option>  
+        <option>USD/ARS (OTC)</option>
+        <option>USD/ZAR (OTC)</option>
+        <option>EUR/NZD (OTC)</option>
+        <option>NZD/CAD (OTC)</option>
+        <option>NZD/JPY (OTC)</option>
+        <option>NZD/CHF (OTC)</option>
+        <option>AUD/NZD (OTC)</option>
+        <option>GBP/NZD (OTC)</option>
+        <option>USCrude (OTC)</option>
+        <option>GOLD (OTC)</option>
+        <option>UKBrent (OTC)</option>
+        <option>SILVER (OTC)</option>
+        <option>BITCOIN (OTC)</option>
+        <option>BITCOIN CASH (OTC)</option>
+      </select>
+      <select id="timeframeLive">
+        <option>5s</option><option>10s</option><option>15s</option><option>30s</option>
+        <option>M1</option><option>M2</option><option>M5</option><option>M10</option><option>M15</option>
+      </select>
+      <button onclick="generateLiveSignal()"><span class="snow">❄️</span> SIGNAL GENERATE</button>
+      <div id="outputLive"></div>
+    </div>
+
+    <!-- FUTURE SIGNAL -->
+    <div class="bot-container" id="futureBot">
+      <h1>S_R FUTURE SIGNAL GENERATOR</h1>
+      <div class="typing" id="typingFuture"></div>
+      <select id="marketFuture">
+        <option>USD/BDT (OTC)</option>
+        <option>USD/BRL (OTC)</option>
+        <option>USD/INR (OTC)</option>
+        <option>USD/IDR (OTC)</option>
+        <option>USD/MXN (OTC)</option>
+        <option>USD/PHP (OTC)</option>
+        <option>USD/PKR (OTC)</option>
+        <option>USD/NGN (OTC)</option>
+        <option>USD/COP (OTC)</option>  
+        <option>USD/EGP (OTC)</option>
+        <option>USD/TRY (OTC)</option>  
+        <option>USD/ARS (OTC)</option>
+        <option>USD/ZAR (OTC)</option>
+        <option>EUR/NZD (OTC)</option>
+        <option>NZD/CAD (OTC)</option>
+        <option>NZD/JPY (OTC)</option>
+        <option>NZD/CHF (OTC)</option>
+        <option>AUD/NZD (OTC)</option>
+        <option>GBP/NZD (OTC)</option>
+        <option>USCrude (OTC)</option>
+        <option>GOLD (OTC)</option>
+        <option>UKBrent (OTC)</option>
+        <option>SILVER (OTC)</option>
+        <option>BITCOIN (OTC)</option>
+        <option>BITCOIN CASH (OTC)</option>
+      </select>
+      <select id="timeframeFuture">
+        <option>5s</option><option>10s</option><option>15s</option><option>30s</option>
+        <option>M1</option><option>M2</option><option>M5</option><option>M10</option><option>M15</option>
+      </select>
+      <select id="quantityFuture">
+        <option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option>
+      </select>
+      <button onclick="generateFutureSignals()"><span class="snow">❄️</span> SIGNAL GENERATE</button>
+      <div class="signal-list" id="signalListFuture"></div>
+    </div>
+  </div>
+
+<!-- BOX 2 : LICENSE INFO -->
+  <h2 style="margin-top:60px">How To Get License Key</h2>
+  <div class="box">
+    <h3 class="neon">Free License Key</h3>
+    <p style="margin:15px 0;color:#cbd5f5">আমাদের চ্যানেলে জয়েন থাকুন। চ্যানেল মালিক <span class="neon">S_R TRADER</span> নিয়মিত এক্টিভ মেম্বারদের Giveaway করে থাকেন</p>
+<a href="https://t.me/+jlIIxaT6OB0wNDk1" target="_blank">
+  <button>Join Channel</button>
+</a>
+  </div>
+
+
+  <!-- BOX 3 : WHY CHOOSE -->
+  <h2 style="margin-top:70px">Why Choose <span class="neon">S_R PROFIT HACKER</span> ?</h2>
+  <div class="grid">
+    <div class="box">⚡<br><br><b>Real - Time Signals</b><br>Get instant trading signals with high accuracy predictions.</div>
+    <div class="box">📡<br><br><b>Secure & Reliable</b><br>Enterprise-grade security with 99.9% uptime guarantee.</div>
+    <div class="box">📲<br><br><b>AI Chart Analysis</b><br>Upload charts and get instant AI-powered analysis.</div>
+  </div>
+
+
+  <!-- BOX 4 : OWNER -->
+  <div class="box owner" style="margin-top:70px">
+    <h2 class="neon">S_R PROFIT HACKER OWNER</h2>
+    <img src="https://i.ibb.co/bMGqKmpb/logo.png" alt="Owner">
+    <p style="color:#cbd5f5;font-size:14px;line-height:1.7">
+      ট্রেডিং এর ৪ বছরের অভিজ্ঞতা নিয়ে, <span class="neon">S_R TRADER</span> হাজারো ট্রেডার এর মেন্টর হিসেবে কাজ করেছেন। তাঁর গভীর মার্কেট বিশ্লেষণ এবং ঝুঁকি ম্যানেজমেন্ট স্ট্র্যাটেজি হাজারো মানুষকে সফল ট্রেডিং জার্নিতে সাহায্য করেছে।<br><br>
+      <span class="neon">S_R PROFIT HACKER</span> এর Founder হিসেবে, তিনি হাজার হাজার Traders দের Reliable এবং Data-Driven Signals প্রদান করার জন্য প্রতিশ্রুতিবদ্ধ।<br><br>
+      তাঁর Vision এবং Expertise এর মাধ্যমে, <span class="neon">S_R PROFIT HACKER</span> তৈরি করেছেন Traders দের Market এর Complexity Navigate করতে এবং Confident Trading Decisions নিতে সাহায্য করার জন্য
+    </p>
+  </div>
+
+  <!-- BOX 5 : CTA -->
+  <div class="box" style="margin-top:70px;text-align:center">
+    <h2 class="neon">Ready to Start Trading with AI?</h2>
+    <p style="margin-top:10px;color:#94a3b8">Join thousands of traders using <span class="neon">S_R PROFIT HACKER</span> for accurate market signals</p>
+  </div>
+
+</section>
+
+<footer>© 2026 <span class="neon">S_R PROFIT HACKER</span> | All Rights Reserved </footer>
+
+<script>
+/* ==================== Typing Effects ==================== */
+const topText = "Trade With AI";
+let idx = 0;
+function typeEffectTop(){if(idx<=topText.length){document.getElementById("typing").innerText=topText.slice(0,idx);idx++;}else{idx=0;document.getElementById("typing").innerText=""}}
+setInterval(typeEffectTop,150);
+
+let idxLive=0; let idxFuture=0;
+const textLive="TRADE WITH AI";
+const textFuture="TRADE WITH AI";
+setInterval(()=>{document.getElementById("typingLive").innerText=textLive.slice(0,idxLive); idxLive=(idxLive>=textLive.length?0:idxLive+1)},200);
+setInterval(()=>{document.getElementById("typingFuture").innerText=textFuture.slice(0,idxFuture); idxFuture=(idxFuture>=textFuture.length?0:idxFuture+1)},200);
+
+/* ==================== FAQ ==================== */
+function toggleFAQ(){
+  const f=document.getElementById('faq');
+  f.style.display=f.style.display==='block'?'none':'block';
+}
+document.addEventListener('click',function(e){
+  const faq=document.getElementById('faq');
+  const menu=document.querySelector('.menu');
+  if(!faq.contains(e.target)&&!menu.contains(e.target)) faq.style.display='none';
+});
+
+/* ==================== License System (FIXED) ==================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const activateBtn = document.getElementById("activateBtn");
+  const msgBox = document.createElement("p");
+  msgBox.style.marginTop = "15px";
+  msgBox.style.textAlign = "center";
+  msgBox.style.fontSize = "14px";
+  document.getElementById("activateBox").appendChild(msgBox);
+
+  activateBtn.addEventListener("click", () => {
+    const name = document.getElementById("nameInput").value.trim();
+    const telegram = document.getElementById("telegramInput").value.trim();
+    const license = document.getElementById("licenseInput").value.trim();
+
+    const VALID_LICENSES = [
+      "S_R-PRO-TRADER",
+      "S_R-999-ZYXWV"
+    ];
+
+    msgBox.innerText = "";
+
+    if (!name || !telegram || !license) {
+      msgBox.style.color = "#ff4d6d";
+      msgBox.innerText = "❌ Please fill all fields";
+      return;
+    }
+
+    if (!VALID_LICENSES.includes(license)) {
+      msgBox.style.color = "#ff4d6d";
+      msgBox.innerText = "Invalid License Key ❌";
+      return;
+    }
+
+    msgBox.style.color = "#00ff9c";
+    msgBox.innerText = "Bot Access Granted ✅";
+
+    setTimeout(() => {
+      document.getElementById("activateBox").style.display = "none";
+      document.getElementById("botSections").style.display = "block";
+    }, 800);
+  });
+
+  // 🔒 Refresh করলে আবার লাইসেন্স চাই
+  document.getElementById("activateBox").style.display = "block";
+  document.getElementById("botSections").style.display = "none";
+
+});
+
+/* ==================== Synced Typing Placeholder ==================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const fields = [
+    { el: document.getElementById("nameInput"), text: "Full Name" },
+    { el: document.getElementById("telegramInput"), text: "@Username" },
+    { el: document.getElementById("licenseInput"), text: "S_R-XXX-XXXXX" }
+  ];
+
+  let index = 0;
+  const maxLength = Math.max(...fields.map(f => f.text.length));
+
+  setInterval(() => {
+    fields.forEach(f => {
+      f.el.placeholder = f.text.slice(0, index);
+    });
+
+    index++;
+    if (index > maxLength) index = 0;
+
+  }, 120); // 🔁 same speed for all
+});
+
+/* ==================== LIVE SIGNAL ==================== */
+function generateLiveSignal(){
+  const market=document.getElementById("marketLive").value;
+  const timeframe=document.getElementById("timeframeLive").value;
+  const action=Math.random()>0.5?"BUY":"SELL";
+  const actionClass=action==="BUY"?"buy":"sell";
+  const confidence=Math.floor(Math.random()*10)+85;
+  const signalId=Math.random().toString(36).substring(2,8);
+  const now=new Date();
+  const delayMinutes=Math.random()>0.5?2:3;
+  now.setMinutes(now.getMinutes()+delayMinutes);
+  const entryTime = now.toLocaleTimeString('en-GB', {
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false
+});
+  const generatedTime=new Date().toLocaleString();
+  // ✅ Clear previous signal for live
+  document.getElementById("outputLive").innerHTML=`
+    <div class="signal-card">
+      <div class="signal-header">
+        <div><div class="pair">${market}</div><div class="signal-id">Signal #${signalId}</div></div>
+        <div class="action ${actionClass}">${action}</div>
+      </div>
+      <div class="grid2">
+        <div class="box2"><div>Entry Time</div><strong>${entryTime}</strong></div>
+        <div class="box2"><div>Duration</div><strong>${timeframe}</strong></div>
+        <div class="box2"><div>MTG Must</div><strong>1X Amount</strong></div>
+        <div class="box2"><div>Confidence</div><strong>${confidence}%</strong></div>
+      </div>
+      <div class="generated">Generated at ${generatedTime}</div>
+    </div>
+  `;
+}
+
+/* ==================== FUTURE SIGNAL ==================== */
+let lastFutureTime=null;
+function getRandomGap(){return Math.floor(Math.random()*4)+2;} // 2-5 minutes
+function generateFutureSignals(){
+  const market=document.getElementById("marketFuture").value;
+  const timeframe=document.getElementById("timeframeFuture").value;
+  const qty=parseInt(document.getElementById("quantityFuture").value);
+  for(let i=0;i<qty;i++){
+    let baseTime=lastFutureTime?new Date(lastFutureTime):new Date();
+    const gap=getRandomGap();
+    baseTime.setMinutes(baseTime.getMinutes()+gap);
+    lastFutureTime=new Date(baseTime);
+    const timeStr = baseTime.toLocaleTimeString('en-GB', {
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false
+});
+    const isCall=Math.random()>0.5;
+    const typeText=isCall?`<span class="call">CALL⬆</span>`:`<span class="put">PUT⬇</span>`;
+    const signalHTML=`<div class="signal-item">🔗 ${timeframe} ; ${market} - ${timeStr} &gt; ${typeText}</div>`;
+    document.getElementById("signalListFuture").insertAdjacentHTML("beforeend",signalHTML);
+  }
+}
+</script>
+</body>
+</html>
