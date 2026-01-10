@@ -235,9 +235,7 @@ document.addEventListener('click',function(e){
 });
 
 /* ==================== License System (FIXED) ==================== */
-
 document.addEventListener("DOMContentLoaded", () => {
-
   const activateBtn = document.getElementById("activateBtn");
   const msgBox = document.createElement("p");
   msgBox.style.marginTop = "15px";
@@ -245,15 +243,12 @@ document.addEventListener("DOMContentLoaded", () => {
   msgBox.style.fontSize = "14px";
   document.getElementById("activateBox").appendChild(msgBox);
 
-  activateBtn.addEventListener("click", () => {
+  const LICENSE_URL = "https://raw.githubusercontent.com/srtrader098/license-server/refs/heads/main/license.json";
+
+  activateBtn.addEventListener("click", async () => {
     const name = document.getElementById("nameInput").value.trim();
     const telegram = document.getElementById("telegramInput").value.trim();
     const license = document.getElementById("licenseInput").value.trim();
-
-    const VALID_LICENSES = [
-      "S_R-PRO-TRADER",
-      "S_R-999-ZYXWV"
-    ];
 
     msgBox.innerText = "";
 
@@ -263,25 +258,33 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (!VALID_LICENSES.includes(license)) {
+    try {
+      const res = await fetch(LICENSE_URL);
+      const data = await res.json();
+      const VALID_LICENSES = Object.keys(data);
+
+      if (!VALID_LICENSES.includes(license)) {
+        msgBox.style.color = "#ff4d6d";
+        msgBox.innerText = "Invalid License Key ❌";
+        return;
+      }
+
+      msgBox.style.color = "#00ff9c";
+      msgBox.innerText = "Bot Access Granted ✅";
+      setTimeout(() => {
+        document.getElementById("activateBox").style.display = "none";
+        document.getElementById("botSections").style.display = "block";
+      }, 800);
+
+    } catch (e) {
       msgBox.style.color = "#ff4d6d";
-      msgBox.innerText = "Invalid License Key ❌";
-      return;
+      msgBox.innerText = "❌ License Server Error";
     }
-
-    msgBox.style.color = "#00ff9c";
-    msgBox.innerText = "Bot Access Granted ✅";
-
-    setTimeout(() => {
-      document.getElementById("activateBox").style.display = "none";
-      document.getElementById("botSections").style.display = "block";
-    }, 800);
   });
 
   // 🔒 Refresh করলে আবার লাইসেন্স চাই
   document.getElementById("activateBox").style.display = "block";
   document.getElementById("botSections").style.display = "none";
-
 });
 
 /* ==================== Synced Typing Placeholder ==================== */
@@ -336,7 +339,7 @@ function generateLiveSignal(){
         <div class="box2"><div>🕒 Entry Time</div><strong>${entryTime}</strong></div>
         <div class="box2"><div>⚡ Duration</div><strong>${timeframe}</strong></div>
         <div class="box2"><div>🛟 MTG Must</div><strong>1X Amount</strong></div>
-        <div class="box2"><div>🔥 Conference</div><strong>${confidence}%</strong></div>
+        <div class="box2"><div>🔥 Confidence</div><strong>${confidence}%</strong></div>
       </div>
       <div class="generated">Generated at ${generatedTime}</div>
     </div>
