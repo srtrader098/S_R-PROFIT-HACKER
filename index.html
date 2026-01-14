@@ -364,7 +364,7 @@ function generateFutureSignals(){
   hour12: false
 });
     const isCall=Math.random()>0.5;
-    const typeText=isCall?`<span class="call">CALL⬆</span>`:`<span class="put">PUT⬇</span>`;
+    const typeText=isCall?`<span class="call">BUY👆</span>`:`<span class="put">PUT👇</span>`;
     const signalHTML=`<div class="signal-item">🔗 ${timeframe} ; ${market} - ${timeStr} &gt; ${typeText}</div>`;
     document.getElementById("signalListFuture").insertAdjacentHTML("beforeend",signalHTML);
   }
